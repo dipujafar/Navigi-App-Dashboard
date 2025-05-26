@@ -6,7 +6,7 @@ type TPropsType = {
   setOpen: (collapsed: boolean) => void;
 };
 
-const UserDetails = ({ open, setOpen }: TPropsType) => {
+const EarningDetailsModal = ({ open, setOpen }: TPropsType) => {
   return (
     <Modal
       open={open}
@@ -48,20 +48,30 @@ const UserDetails = ({ open, setOpen }: TPropsType) => {
           </div>
           <hr />
           <div className="flex justify-between">
-            <h4>Age :</h4>
-            <p className="font-medium">35 Year</p>
+            <h4>Transaction ID :  :</h4>
+            <p className="font-medium">#123456</p>
           </div>
 
           <hr />
           <div className="flex justify-between">
-            <h4>Gender :</h4>
-            <p className="font-medium">Male</p>
+            <h4>Date  :</h4>
+            <p className="font-medium">05/17/2025 </p>
           </div>
           <hr />
 
           <div className="flex justify-between">
-            <h4>Address :</h4>
-            <p className="font-medium">California</p>
+            <h4>A/C number  :</h4>
+            <p className="font-medium">**** **** **** *545</p>
+          </div>
+          <hr />
+          <div className="flex justify-between">
+            <h4>Transaction amount :</h4>
+            <p className="font-medium">$100</p>
+          </div>
+          <hr />
+          <div className="flex justify-between">
+            <h4>Package : </h4>
+            <p className="font-medium">Premium Plan</p>
           </div>
         </div>
       </div>
@@ -69,4 +79,4 @@ const UserDetails = ({ open, setOpen }: TPropsType) => {
   );
 };
 
-export default UserDetails;
+export default EarningDetailsModal;

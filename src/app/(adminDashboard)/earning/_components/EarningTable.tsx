@@ -11,36 +11,35 @@ import {
 import { useState } from "react";
 import DataTable from "@/utils/DataTable";
 import { CgUnblock } from "react-icons/cg";
-import { ArrowDownWideNarrowIcon, Eye, Search } from "lucide-react";
-import UserDetails from "@/components/(adminDashboard)/user/UserDetails";
+import { Eye, Search } from "lucide-react";
+import EarningDetailsModal from "@/components/(adminDashboard)/earning/EarningDetailsModal";
 
 type TDataType = {
   key?: number;
   serial: number;
   name: string;
   email: string;
+  amount: number;
   date: string;
 };
 const data: TDataType[] = Array.from({ length: 18 }).map((data, inx) => ({
   key: inx,
   serial: inx + 1,
-  name: "Muskan Tanaz",
-  email: "muskantanaz@gmail.com",
+  name: "Robert Fox",
+  email: "robert@gmail.com",
+  amount: 100,
   date: "19 Jun 2025",
   type: "User",
 }));
 
-const confirmBlock: PopconfirmProps["onConfirm"] = (e) => {
-  console.log(e);
-  message.success("Blocked the user");
-};
 
-const CustomersTable = () => {
+
+const EarningTable = () => {
   const [open, setOpen] = useState(false);
 
   const columns: TableProps<TDataType>["columns"] = [
     {
-      title: "Customer ID",
+      title: "Serial",
       dataIndex: "serial",
       render: (text) => <p>#{text}</p>,
     },
@@ -66,6 +65,11 @@ const CustomersTable = () => {
     },
 
     {
+      title: "Amount",
+      dataIndex: "amount",
+      render: (text) => <p>${text}</p>,
+    },
+    {
       title: "Date",
       dataIndex: "date",
     },
@@ -74,22 +78,11 @@ const CustomersTable = () => {
       title: "Action",
       dataIndex: "action",
       render: () => (
-        <div className="flex gap-2">
-          <Eye
-            size={22}
-            color="var(--color-text-color)"
-            onClick={() => setOpen(!open)}
-          />
-          <Popconfirm
-            title="Block the user"
-            description="Are you sure to block this user?"
-            onConfirm={confirmBlock}
-            okText="Yes"
-            cancelText="No"
-          >
-            <CgUnblock size={22} color="#CD0335" />
-          </Popconfirm>
-        </div>
+        <Eye
+          size={22}
+          color="#5C5C5C"
+          onClick={() => setOpen(!open)}
+        />
       ),
     },
   ];
@@ -97,17 +90,17 @@ const CustomersTable = () => {
   return (
     <div className="bg-[#F9F9FA] rounded-md">
       <div className="flex justify-between items-center px-3 py-5">
-        <h1 className="  text-2xl text-text-color">Customer Lists</h1>
+        <h1 className="  text-2xl text-text-color">Recent Transactions</h1>
         <Input
           className="!w-[180px] lg:!w-[250px] !py-2 placeholder:text-white !border-none !bg-[#ECECEC]"
-          placeholder="Search Users..."
+          placeholder="Search..."
           prefix={<Search size={16} color="#000"></Search>}
         ></Input>
       </div>
       <DataTable columns={columns} data={data} pageSize={11}></DataTable>
-      <UserDetails open={open} setOpen={setOpen}></UserDetails>
+      <EarningDetailsModal open={open} setOpen={setOpen}></EarningDetailsModal>
     </div>
   );
 };
 
-export default CustomersTable;
+export default EarningTable;

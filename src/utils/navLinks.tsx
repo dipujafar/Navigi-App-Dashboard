@@ -1,7 +1,7 @@
 import { RiDashboardHorizontalFill } from "react-icons/ri";
 import { GoPeople } from "react-icons/go";
 import Link from "next/link";
-import { BadgePlus, Menu, SquareMenu } from "lucide-react";
+import { BadgePlus, Menu, SquareMenu, Wallet } from "lucide-react";
 
 export const navLinks = [
   {
@@ -10,9 +10,14 @@ export const navLinks = [
     label: <Link href={"/dashboard"}>Dashboard</Link>,
   },
   {
+    key: "earning",
+    icon: <Wallet size={18} />,
+    label: <Link href={"/earning"}>Earning</Link>,
+  },
+  {
     key: "customers",
     icon: <GoPeople size={18} />,
-    label: <Link href={"/customers"}>Customers</Link>,
+    label: <Link href={"/customers"}>User</Link>,
   },
   {
     key: "menus",

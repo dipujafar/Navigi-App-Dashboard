@@ -17,9 +17,9 @@ const antTheme = {
       headerColor: "#30303",
       colorBgContainer: "#F9F9FA",
       headerSplitColor: "#B6C2FF",
-      colorText: "var(--color-text-color)",
+      colorText: "#5C5C5C",
       borderColor: "var(--color-section-bg)",
-      rowHoverBg: "#FFC3B0",
+      rowHoverBg: "#B6C2FF",
     },
     Modal: {
       colorIcon: "rgba(255,255,255,0.45)",

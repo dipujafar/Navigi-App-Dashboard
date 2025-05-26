@@ -1,5 +1,5 @@
+import { StatCard } from "@/components/shared/StatCard";
 import React from "react";
-import { StatCard } from "./StatCard";
 
 const StatContainer = () => {
   return (
