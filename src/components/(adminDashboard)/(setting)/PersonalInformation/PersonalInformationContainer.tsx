@@ -60,7 +60,7 @@ const PersonalInformationContainer = () => {
         <div className={edit ? "hidden" : ""}>
           <Button
             style={{
-              backgroundColor: "var(--color-secondary)",
+              backgroundColor: "var(--color-main)",
               border: "none",
             }}
             onClick={() => setEdit(true)}
@@ -75,7 +75,7 @@ const PersonalInformationContainer = () => {
 
       {/* personal information */}
       <div className="mt-10 flex justify-center flex-col xl:flex-row items-center  gap-10">
-        <div className="bg-primary-gray h-[365px] md:w-[350px] rounded-xl border border-main-color flex justify-center items-center  text-text-color">
+        <div className="bg-primary-light-gray h-[365px] md:w-[350px] rounded-xl border border-main-color flex justify-center items-center  text-text-color">
           <div className="space-y-1 relative">
             <div className="relative group">
               <Image
@@ -125,12 +125,12 @@ const PersonalInformationContainer = () => {
             theme={{
               components: {
                 Input: {
-                  colorBgContainer: "var(--color-primary-gray)",
-                  colorText: "#fff",
-                  colorTextPlaceholder: "#fff",
+                  colorBgContainer: "var(--color-primary-light-gray)",
+                  colorText: "#000",
+                  colorTextPlaceholder: "#000",
                 },
                 Form: {
-                  labelColor: "#fff",
+                  labelColor: "#000",
                 },
               },
             }}

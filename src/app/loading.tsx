@@ -7,7 +7,7 @@ const loading = () => {
         theme={{
           components: {
             Spin: {
-              colorPrimary: "#FF3D00",
+              colorPrimary: "#74D5B3",
             },
           },
         }}

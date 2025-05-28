@@ -1,7 +1,8 @@
 import { RiDashboardHorizontalFill } from "react-icons/ri";
 import { GoPeople } from "react-icons/go";
 import Link from "next/link";
-import { BadgePlus, Menu, SquareMenu, Wallet } from "lucide-react";
+import { BadgePlus, Menu, SquareMenu, Wallet, WalletCards } from "lucide-react";
+import { IoSettingsOutline } from "react-icons/io5";
 
 export const navLinks = [
   {
@@ -17,24 +18,34 @@ export const navLinks = [
   {
     key: "customers",
     icon: <GoPeople size={18} />,
-    label: <Link href={"/customers"}>User</Link>,
+    label: <Link href={"/customers"}>Users</Link>,
   },
   {
-    key: "menus",
+    key: "categories",
     icon: <Menu size={18} />,
-    label: "menus",
+    label: "categories",
     children: [
       {
         key: "menus_list",
         icon: <SquareMenu size={18} />,
-        label: "Menus list",
+        label: "Products",
       },
       {
         key: "add_menus",
-        icon: <BadgePlus  size={18} />,
-        label: "Add Menus",
+        icon: <BadgePlus size={18} />,
+        label: "Services",
       },
     ],
+  },
+  {
+    key: "subscriptions",
+    icon: <WalletCards size={18} />,
+    label: <Link href={"/subscriptions"}>Subscriptions</Link>,
+  },
+  {
+    key: "settings",
+    icon: <IoSettingsOutline size={18} />,
+    label: <Link href={"/settings"}>Settings</Link>,
   },
   //   {
   //     key: "user-request",

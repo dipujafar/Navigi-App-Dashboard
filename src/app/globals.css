@@ -17,6 +17,7 @@
   --color-primary-deep-blue: #202947;
   --color-primary-white: #fff;
   --color-primary-gray: #a0a7b7;
+  --color-primary-light-gray: #F4F6FF66;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -78,7 +79,7 @@
 .ql-container {
   /* background-color: white; */
   color: var(--color-text-color) !important;
-  height: 620px !important;
+  height: 450px !important;
   border: none !important;
   border-radius: 10px;
   overflow: auto !important;

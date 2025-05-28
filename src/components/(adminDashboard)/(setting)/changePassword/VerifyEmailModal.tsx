@@ -82,7 +82,7 @@ const VerifyEmailModal = ({ open, setOpen }: TPropsType) => {
               htmlType="submit"
               size="large"
               block
-              className="!border-none "
+         
             >
               Send OPT
             </Button>

@@ -6,6 +6,7 @@ import avatarImg from "@/assets/image/profile.png";
 
 import Link from "next/link";
 import { X } from "lucide-react";
+import useGreeting from "@/hooks/useGreeting";
 
 type TNavbarProps = {
   collapsed: boolean;
@@ -13,6 +14,7 @@ type TNavbarProps = {
 };
 
 const Navbar = ({ collapsed, setCollapsed }: TNavbarProps) => {
+   const greeting = useGreeting();
   return (
     <div className="flex items-center justify-between w-[97%] font-poppins text-text-color xl:px-8 px-4">
       {/* Header left side */}
@@ -29,7 +31,7 @@ const Navbar = ({ collapsed, setCollapsed }: TNavbarProps) => {
         <div className="flex flex-col ">
           <h2 className="text-lg  font-medium">
           Dashboard
-            <span className="block  text-sm font-normal">Hello Polash, welcome back!</span>
+            <span className="block  text-sm font-normal">{greeting}, Istiak Ahmed</span>
           </h2>
         </div>
       </Flex>
@@ -59,7 +61,7 @@ const Navbar = ({ collapsed, setCollapsed }: TNavbarProps) => {
         <Link href={"/personal-information"} className="flex items-center">
           <Avatar
             src={avatarImg.src}
-            size={42}
+            size={40}
             className="border border-main-color size-12"
           ></Avatar>
         </Link>

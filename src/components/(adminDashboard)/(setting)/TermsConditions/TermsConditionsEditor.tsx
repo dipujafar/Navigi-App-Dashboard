@@ -52,6 +52,7 @@ const TermsConditionsEditor = () => {
           border: "1px solid #EFE8FD",
           marginTop: "20px",
           borderRadius: "10px",
+          background: "#68c0a114",
         }}
       />
       <Button
@@ -59,7 +60,6 @@ const TermsConditionsEditor = () => {
         block
         style={{
           marginTop: "20px",
-          border: "none",
         }}
       >
         Save Changes

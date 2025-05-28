@@ -45,7 +45,7 @@ const RecentlyUser = () => {
       render: (text, record) => (
         <div className="flex  justify-center items-center gap-x-1">
           <Image
-            src={"/user-profile.png"}
+            src={"/user_image1.png"}
             alt="profile-picture"
             width={40}
             height={40}

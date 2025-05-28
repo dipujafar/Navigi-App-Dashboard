@@ -57,12 +57,13 @@ const ForgetPasswordModal = ({ open, setOpen }: TPropsType) => {
             theme={{
               components: {
                 Input: {
-                  colorBgContainer: "var(--color-primary-gray)",
-                  colorText: "#fff",
-                  colorTextPlaceholder: "#fff",
+                  colorBgContainer: "",
+                  colorText: "#000",
+                  colorTextPlaceholder: "#000",
                 },
                 Form: {
-                  labelColor: "#fff",
+                  labelColor: "var(--color-primary-gray)",
+                  labelFontSize: 14
                 },
               },
             }}
@@ -89,7 +90,7 @@ const ForgetPasswordModal = ({ open, setOpen }: TPropsType) => {
                 htmlType="submit"
                 size="large"
                 block
-                className="!border-none "
+          
               >
                 Send OTP
               </Button>

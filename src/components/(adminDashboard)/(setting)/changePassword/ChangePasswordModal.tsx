@@ -56,12 +56,13 @@ const ChangePasswordModal = ({ open, setOpen }: TPropsType) => {
             theme={{
               components: {
                 Input: {
-                  colorBgContainer: "var(--color-primary-gray)",
-                  colorText: "#fff",
-                  colorTextPlaceholder: "#fff",
+                  colorBgContainer: "",
+                  colorText: "#000",
+                  colorTextPlaceholder: "#000",
                 },
                 Form: {
-                  labelColor: "#fff",
+                  labelColor: "var(--color-primary-gray)",
+                  labelFontSize: 14,
                 },
               },
             }}
@@ -119,7 +120,7 @@ const ChangePasswordModal = ({ open, setOpen }: TPropsType) => {
                   setOpen(false);
                   setOpenModal(true);
                 }}
-                className="mb-5 font-medium cursor-pointer text-gray-200"
+                className="mb-5 font-medium cursor-pointer text-gray-600"
               >
                 Forget password?
               </p>
@@ -128,7 +129,7 @@ const ChangePasswordModal = ({ open, setOpen }: TPropsType) => {
                 htmlType="submit"
                 size="large"
                 block
-                className="!border-none !py-6"
+                className="!py-6 border-main-color"
               >
                 Update Password
               </Button>

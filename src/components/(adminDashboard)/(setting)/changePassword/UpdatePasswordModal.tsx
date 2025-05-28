@@ -51,12 +51,13 @@ const UpdatePasswordModal = ({ open, setOpen }: TPropsType) => {
             theme={{
               components: {
                 Input: {
-                  colorBgContainer: "var(--color-primary-gray)",
-                  colorText: "#fff",
-                  colorTextPlaceholder: "#fff",
+                  
+                  colorText: "#000",
+                  colorTextPlaceholder: "#000",
                 },
                 Form: {
-                  labelColor: "#fff",
+                  labelColor: "#var(--color-primary-gray)",
+                  labelFontSize: 14,
                 },
               },
             }}

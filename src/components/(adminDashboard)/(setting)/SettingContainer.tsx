@@ -37,22 +37,22 @@ const SettingContainer = () => {
             <div
               key={inx}
               onClick={() => setOpen(!open)}
-              className="bg-primary-gray  p-5 rounded flex justify-between items-center cursor-pointer"
+              className="bg-primary-light-gray shadow-md  p-5 rounded flex justify-between items-center cursor-pointer"
             >
               <h4 className="text-text-color font-medium text-lg">
                 {link?.lable}
               </h4>
-              <IoIosArrowForward size={18} color="#fff" />
+              <IoIosArrowForward size={18} color="#000" />
             </div>
           );
         } else {
           return (
             <Link key={link.path} href={`/${link.path}`}>
-              <div className="bg-primary-gray  p-5 rounded flex justify-between items-center">
+              <div className="bg-primary-light-gray shadow-md  p-5 rounded flex justify-between items-center">
                 <h4 className="text-text-color font-medium text-lg">
                   {link?.lable}
                 </h4>
-                <IoIosArrowForward size={18} color="#fff" />
+              <IoIosArrowForward size={18} color="#000" />
               </div>
             </Link>
           );

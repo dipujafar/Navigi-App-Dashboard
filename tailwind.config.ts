@@ -20,6 +20,7 @@ const config: Config = {
   			'primary-green': 'var(--color-primary-green)',
   			'primary-red': 'var(--color-primary-red)',
   			'primary-gray': 'var(--color-primary-gray)',
+  			'primary-light-gray': 'var(--color-primary-light-gray)',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
