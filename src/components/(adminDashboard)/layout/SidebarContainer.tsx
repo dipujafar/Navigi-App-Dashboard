@@ -1,16 +1,24 @@
 "use client";
-import { Button, Menu, MenuProps } from "antd";
+import { Avatar, Button, Menu, MenuProps } from "antd";
 import Sider from "antd/es/layout/Sider";
-// import Image from "next/image";
 import Link from "next/link";
-import logo from "@/assets/image/logo.png";
 import faviconLogo from "@/assets/image/faviconLogo.png";
 import { navLinks } from "@/utils/navLinks";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { IoLogInOutline } from "react-icons/io5";
+import avatarImg from "@/assets/image/profile.png";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import {
+  Menubar,
+  MenubarContent,
+  MenubarItem,
+  MenubarMenu,
+  MenubarSeparator,
+  MenubarShortcut,
+  MenubarTrigger,
+} from "@/components/ui/menubar";
+import { ChevronRight } from "lucide-react";
 
 const SidebarContainer = ({ collapsed }: { collapsed: boolean }) => {
   const [current, setCurrent] = useState("dashboard");
@@ -48,16 +56,59 @@ const SidebarContainer = ({ collapsed }: { collapsed: boolean }) => {
         maxHeight: "100vh",
         overflowY: "auto",
         minHeight: "100vh",
+
       }}
     >
-      {/* logo  */}
-      <div className="py-8 text-black">
-        
-        <h4>ByeWind</h4>
-      </div>
+      {/* =============== User Profile ===============  */}
+
+      <Menubar className="py-8 border-none shadow-none px-0 border ">
+        <MenubarMenu>
+          <MenubarTrigger className="shadow-none px-0">
+            <div
+              className={cn(
+                " text-black flex items-center gap-x-1 cursor-pointer",
+                collapsed && "flex-col"
+              )}
+            >
+              <Avatar
+                src={avatarImg.src}
+                size={40}
+                className="border border-main-color size-12"
+              ></Avatar>
+              <h4
+                className={cn(
+                  "text-base font-medium truncate flex-1",
+                  collapsed && "hidden"
+                )}
+              >
+                Istiak Ahmedh
+              </h4>
+            </div>
+          </MenubarTrigger>
+          <MenubarContent className="text-primary-gray">
+            <Link href={"/personal-information"}>
+            <MenubarItem className="hover:bg-gray-100 cursor-pointer">
+              Profile{" "}
+              <MenubarShortcut>
+                <ChevronRight size={16} />
+              </MenubarShortcut>
+            </MenubarItem>
+            </Link>
+            <MenubarSeparator />
+            <Link href={"/login"}>
+              <MenubarItem className="hover:bg-gray-100 cursor-pointer">Logout</MenubarItem>
+            </Link>
+          </MenubarContent>
+        </MenubarMenu>
+      </Menubar>
 
       {
-        <h1 className={cn("text-[#00000066] mb-4", collapsed ? "5px text-[10px]" : "3px ")}>
+        <h1
+          className={cn(
+            "text-[#00000066] mb-4",
+            collapsed ? "5px text-[10px]" : "3px "
+          )}
+        >
           Dashboards
         </h1>
       }
@@ -73,9 +124,9 @@ const SidebarContainer = ({ collapsed }: { collapsed: boolean }) => {
         <div className="py-2 flex flex-col justify-center items-center gap-y-5 ">
           <Link href={"/"}>
             <Image
-              src={logo}
+              src={faviconLogo}
               alt="logo_Image"
-              className={cn(`lg:px-3 `, collapsed && "hidden")}
+              className={cn(`lg:px-1 h-24 w-20`, collapsed && "hidden")}
             />
           </Link>
           <Link href={"/"}>
@@ -86,7 +137,6 @@ const SidebarContainer = ({ collapsed }: { collapsed: boolean }) => {
             />
           </Link>
         </div>
-        
       </div>
     </Sider>
   );

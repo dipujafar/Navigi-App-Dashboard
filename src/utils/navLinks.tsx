@@ -1,7 +1,14 @@
-import { RiDashboardHorizontalFill } from "react-icons/ri";
+import { RiDashboardHorizontalFill, RiLogoutCircleLine } from "react-icons/ri";
 import { GoPeople } from "react-icons/go";
 import Link from "next/link";
-import { BadgePlus, Menu, SquareMenu, Wallet, WalletCards } from "lucide-react";
+import {
+  BadgePlus,
+  Menu,
+  SquareMenu,
+  SquareTerminal,
+  Wallet,
+  WalletCards,
+} from "lucide-react";
 import { IoSettingsOutline } from "react-icons/io5";
 
 export const navLinks = [
@@ -28,12 +35,12 @@ export const navLinks = [
       {
         key: "menus_list",
         icon: <SquareMenu size={18} />,
-        label: <Link href={"/products"}> Products</Link>
+        label: <Link href={"/products"}> Products</Link>,
       },
       {
-        key: "add_menus",
-        icon: <BadgePlus size={18} />,
-        label: "Services",
+        key: "services_list",
+        icon: <SquareTerminal size={18} />,
+        label: <Link href={"/"}>Services</Link>,
       },
     ],
   },
@@ -63,9 +70,4 @@ export const navLinks = [
   //     icon: <IoSettingsOutline size={18} />,
   //     label: <Link href={"/settings"}>Settings</Link>,
   //   },
-  // {
-  //   key: "logout",
-  //   icon: <RiLogoutCircleLine size={18} />,
-  //   label: <Link href={"/login"}>Logout</Link>,
-  // },
 ];

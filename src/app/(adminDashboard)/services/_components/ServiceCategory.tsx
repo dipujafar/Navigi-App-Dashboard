@@ -6,16 +6,9 @@ import Image from "next/image";
 import { message, Popconfirm, PopconfirmProps } from "antd";
 import { useState } from "react";
 import AddCategory from "@/components/shared/AddCategory";
-import Link from "next/link";
 
 // Service categories data array
 const serviceCategories = [
-  {
-    id: 1,
-    name: "Mechanics",
-    icon: "/category_mechanics.png",
-    iconColor: "text-blue-600",
-  },
   {
     id: 2,
     name: "Restaurants",
@@ -82,6 +75,12 @@ const serviceCategories = [
     icon: "/category_restaurants.png",
     iconColor: "text-green-600",
   },
+  {
+    id: 1,
+    name: "Mechanics",
+    icon: "/category_mechanics.png",
+    iconColor: "text-blue-600",
+  },
 ];
 
 const confirmBlock: PopconfirmProps["onConfirm"] = (e) => {
@@ -98,58 +97,56 @@ function ServiceCard({
   const [open, setOpen] = useState(false);
   return (
     <>
-      <Link href={`/products/${category?.id}`}>
-        <Card className="p-4 flex flex-col items-center space-y-3 hover:shadow-md transition-shadow border-[#BBBBBB]">
-          <div className="border-2 rounded-full border-[#268A7E] p-1.5">
-            <Image
-              src={category.icon}
-              alt={category.name}
-              width={70}
-              height={70}
-              className="size-[70px] object-cover"
-            />
-          </div>
+      <Card className="p-4 flex flex-col items-center space-y-3 hover:shadow-md transition-shadow border-[#BBBBBB]">
+        <div className="border-2 rounded-full border-[#268A7E] p-1.5">
+          <Image
+            src={category.icon}
+            alt={category.name}
+            width={70}
+            height={70}
+            className="size-[70px] object-cover"
+          />
+        </div>
 
-          <h3 className="text-sm font-medium text-gray-900 text-center">
-            {category.name}
-          </h3>
+        <h3 className="text-sm font-medium text-gray-900 text-center">
+          {category.name}
+        </h3>
 
-          <div className="flex space-x-2">
-            <Popconfirm
-              title="Delete the category"
-              description="Are you sure to delete this category?"
-              onConfirm={confirmBlock}
-              okText="Yes"
-              cancelText="No"
-            >
-              <Button
-                variant="outline"
-                className="text-xs px-3 py-1 h-6 border-[#74D5B3] text-[#74D5B3] flex-1"
-              >
-                Delete
-              </Button>
-            </Popconfirm>
+        <div className="flex space-x-2">
+          <Popconfirm
+            title="Delete the category"
+            description="Are you sure to delete this category?"
+            onConfirm={confirmBlock}
+            okText="Yes"
+            cancelText="No"
+          >
             <Button
-              onClick={() => setOpen(true)}
-              className="text-xs px-3 py-1 h-6 bg-[#74D5B3] hover:bg-[#268A7E] text-white w-[60px]"
+              variant="outline"
+              className="text-xs px-3 py-1 h-6 border-[#74D5B3] text-[#74D5B3] flex-1"
             >
-              Edit
+              Delete
             </Button>
-          </div>
-        </Card>
-      </Link>
+          </Popconfirm>
+          <Button
+            onClick={() => setOpen(true)}
+            className="text-xs px-3 py-1 h-6 bg-[#74D5B3] hover:bg-[#268A7E] text-white w-[60px]"
+          >
+            Edit
+          </Button>
+        </div>
+      </Card>
       <AddCategory open={open} setOpen={setOpen} title="Edit Category" />
     </>
   );
 }
 
 // Main component
-export default function ProductCategory() {
+export default function ServiceCategory() {
   const [open, setOpen] = useState(false);
   return (
     <>
       <div className="flex justify-between items-center flex-wrap xl:mb-6 mb-4 ">
-        <h3 className="lg:text-2xl text-xl font-medium">Product Categories</h3>
+        <h3 className="lg:text-2xl text-xl font-medium">Services Categories</h3>
         <Button
           onClick={() => setOpen(true)}
           className="flex items-center gap-2 bg-[#74D5B3] hover:bg-[#268A7E]"

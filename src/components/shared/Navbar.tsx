@@ -42,7 +42,7 @@ const Navbar = ({ collapsed, setCollapsed }: TNavbarProps) => {
       {/* Header right side */}
       <Flex align="center" gap={20}>
         {/* Notification */}
-        {/* <Link href={"/notifications"}>
+        <Link href={"/notifications"}>
           <div className="flex justify-center items-center size-12  rounded-full cursor-pointer relative border border-main-color">
             <IoNotificationsOutline size={24} color="#AB9D6E" />
 
@@ -59,15 +59,9 @@ const Navbar = ({ collapsed, setCollapsed }: TNavbarProps) => {
               }}
             ></Badge>
           </div>
-        </Link> */}
-
-        <Link href={"/personal-information"} className="flex items-center">
-          <Avatar
-            src={avatarImg.src}
-            size={40}
-            className="border border-main-color size-12"
-          ></Avatar>
         </Link>
+
+       
       </Flex>
     </div>
   );

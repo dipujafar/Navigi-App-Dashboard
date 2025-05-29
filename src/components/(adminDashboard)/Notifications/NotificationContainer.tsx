@@ -8,21 +8,21 @@ import { Trash2 } from "lucide-react";
 const notificationData = {
   today: [
     {
-      message: "Product Listing Reminder",
+      message: "Added One More Product",
       description: "It's time to update the product description and images",
-      time: "Mon Apr 08 2025 22:00:00 GMT+0000",
+      time: new Date().toISOString(),
     },
     {
-      message: "Account Update Required",
+      message: "Added One More Service Provider",
       description:
         "Please update your business information to continue using the dashboard seamlessly",
-      time: "Mon Apr 08 2025 22:00:00 GMT+0000",
+      time: new Date().toISOString(),
     },
   ],
 
   yesterday: [
     {
-      message: "Account Update Required",
+      message: "Added One More Product",
       description:
         "Please Update your business information to continue using the dashboard seamlessly",
       time: "Mon Apr 07 2025 22:00:00 GMT+0000",
@@ -34,7 +34,7 @@ const notificationData = {
       time: "Mon Apr 07 2025 22:00:00 GMT+0000",
     },
     {
-      message: "Account Update Required",
+      message: "Added One More Product",
       description:
         "Please update your information to continue using dashboard seamlessly",
       time: "Mon Apr 07 2025 22:00:00 GMT+0000",
@@ -83,7 +83,7 @@ const NotificationContainer = () => {
                     </h5>
                     <p>{moment(notification?.time).fromNow()}</p>
                   </div>
-                  <p className="text-gray-300">{notification?.description}</p>
+                  <p className="text-gray-500">{notification?.description}</p>
                 </div>
                 {/* delete option */}
                 <div className="bg-[#D30000]/30 size-10 flex justify-center items-center rounded-full cursor-pointer">
@@ -116,7 +116,7 @@ const NotificationContainer = () => {
                     </h5>
                     <p>{moment(notification?.time).fromNow()}</p>
                   </div>
-                  <p className="text-gray-300">{notification?.description}</p>
+                  <p className="text-gray-400">{notification?.description}</p>
                 </div>
                 {/* delete option */}
                 <div className="bg-[#D30000]/30 size-10 flex justify-center items-center rounded-full cursor-pointer">
