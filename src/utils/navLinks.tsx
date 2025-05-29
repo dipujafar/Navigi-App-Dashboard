@@ -28,7 +28,7 @@ export const navLinks = [
       {
         key: "menus_list",
         icon: <SquareMenu size={18} />,
-        label: "Products",
+        label: <Link href={"/products"}> Products</Link>
       },
       {
         key: "add_menus",

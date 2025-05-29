@@ -30,6 +30,7 @@ const ResetPasswordForm = () => {
       layout="vertical"
     >
       <Form.Item<FieldType>
+        label="New Password"
         name="setPassword"
         rules={[{ required: true, message: "Please your set password!" }]}
       >
@@ -37,12 +38,13 @@ const ResetPasswordForm = () => {
       </Form.Item>
 
       <Form.Item<FieldType>
+        label="Confirm New Password"
         name="reSetPassword"
         rules={[{ required: true, message: "Please input your password!" }]}
       >
         <Input.Password size="large" placeholder="Re-enter password" />
       </Form.Item>
-      <Button htmlType="submit" size="large" block style={{ border: "none" }}>
+      <Button htmlType="submit" size="large" block>
         Sign In
       </Button>
     </Form>

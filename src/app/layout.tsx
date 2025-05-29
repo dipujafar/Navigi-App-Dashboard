@@ -14,7 +14,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "Restuant Dashboard | Smart Start Phonebooth",
+    default: "Admin Dashboard | LIKIDI",
     template: "%s | SoleSwap",
   },
   description: "This is Official Application Dashboard for SoleSwap",

@@ -33,6 +33,7 @@ const ForgetPassForm = () => {
       layout="vertical"
     >
       <Form.Item<FieldType>
+        label="Email"
         name="email"
         rules={[
           { required: true, message: "Please input your email!" },
@@ -45,7 +46,7 @@ const ForgetPassForm = () => {
         <Input size="large" placeholder="Email" />
       </Form.Item>
 
-      <Button htmlType="submit" size="large" block style={{ border: "none" }}>
+      <Button htmlType="submit" size="large" block >
         Send OTP
       </Button>
     </Form>

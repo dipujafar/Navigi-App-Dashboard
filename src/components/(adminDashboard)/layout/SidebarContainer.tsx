@@ -52,6 +52,7 @@ const SidebarContainer = ({ collapsed }: { collapsed: boolean }) => {
     >
       {/* logo  */}
       <div className="py-8 text-black">
+        
         <h4>ByeWind</h4>
       </div>
 
@@ -68,13 +69,13 @@ const SidebarContainer = ({ collapsed }: { collapsed: boolean }) => {
         className="sidebar-menu text-lg bg-main-color !mt-1"
         items={navLinks}
       />
-      <div className="absolute  w-[90%]  bottom-5 flex justify-center items-center px-2">
+      <div className="absolute  w-[90%]  bottom-1 flex justify-center items-center px-2">
         <div className="py-2 flex flex-col justify-center items-center gap-y-5 ">
           <Link href={"/"}>
             <Image
               src={logo}
               alt="logo_Image"
-              className={cn(`lg:px-3`, collapsed && "hidden")}
+              className={cn(`lg:px-3 `, collapsed && "hidden")}
             />
           </Link>
           <Link href={"/"}>
@@ -85,22 +86,7 @@ const SidebarContainer = ({ collapsed }: { collapsed: boolean }) => {
             />
           </Link>
         </div>
-        {/* {!collapsed ? (
-          <Link href={"/login"} className="w-full">
-            <Button
-              icon={<IoLogInOutline size={22} />}
-              className=" w-full !bg-white !text-black !border-main-color flex items-center justify-center font-600 text-18  border border-white hover:!bg-gray-100 !duration-500 !py-5"
-            >
-              Log Out
-            </Button>
-          </Link>
-        ) : (
-          <Link href={"/login"}>
-            <div className=" px-3 py-2 bg-main-color rounded">
-              <IoLogInOutline color="#fff" size={24} />
-            </div>
-          </Link>
-        )} */}
+        
       </div>
     </Sider>
   );

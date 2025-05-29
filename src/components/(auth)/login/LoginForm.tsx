@@ -33,6 +33,7 @@ const LoginForm = () => {
       style={{ width: "354px" }}
     >
       <Form.Item<FieldType>
+        label="Email"
         name="email"
         rules={[
           { required: true, message: "Please input your email!" },
@@ -46,6 +47,7 @@ const LoginForm = () => {
       </Form.Item>
 
       <Form.Item<FieldType>
+        label="Password"
         name="password"
         rules={[{ required: true, message: "Please input your password!" }]}
       >
@@ -55,15 +57,15 @@ const LoginForm = () => {
       <Form.Item<FieldType> name="remember" valuePropName="checked">
         <Flex justify="space-between" align="center">
           <Checkbox>
-            <p className=" font-semibold">Remember me</p>
+            <p className=" font-semibold text-[#818181]">Remember me</p>
           </Checkbox>
           <Link href={"/forget-password"} style={{ textDecoration: "" }}>
-            <p className="font-semibold">Forgot Password?</p>
+            <p className="font-semibold text-[#091A72]">Forgot Password?</p>
           </Link>
         </Flex>
       </Form.Item>
 
-      <Button htmlType="submit" size="large" block style={{ border: "none " }}>
+      <Button htmlType="submit" size="large" block >
         Sign In
       </Button>
     </Form>
