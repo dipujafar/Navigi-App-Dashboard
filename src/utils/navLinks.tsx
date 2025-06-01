@@ -40,7 +40,7 @@ export const navLinks = [
       {
         key: "services_list",
         icon: <SquareTerminal size={18} />,
-        label: <Link href={"/"}>Services</Link>,
+        label: <Link href={"/services"}>Services</Link>,
       },
     ],
   },

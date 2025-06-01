@@ -11,8 +11,16 @@ import {
 import { useState } from "react";
 import DataTable from "@/utils/DataTable";
 import { CgUnblock } from "react-icons/cg";
-import { ArrowDownWideNarrowIcon, Eye, Search } from "lucide-react";
+import { ArrowDownWideNarrowIcon, EllipsisVertical, Eye, Search } from "lucide-react";
 import UserDetails from "@/components/(adminDashboard)/user/UserDetails";
+import { Button } from "@/components/ui/button"
+import { Label } from "@/components/ui/label"
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
+
 
 type TDataType = {
   key?: number;
@@ -92,6 +100,11 @@ const CustomersTable = () => {
         </div>
       ),
     },
+    {
+      title: "",
+      dataIndex: "",
+      render: (text) => <MakeSubscription/> ,
+    }
   ];
 
   return (
@@ -111,3 +124,21 @@ const CustomersTable = () => {
 };
 
 export default CustomersTable;
+
+
+
+
+
+
+ function MakeSubscription() {
+  return (
+    <Popover>
+      <PopoverTrigger asChild>
+        <EllipsisVertical size={20} />
+      </PopoverTrigger>
+      <PopoverContent className="w-52">
+        <Button className="w-full bg-green-500 hover:bg-green-600">Make Subscription</Button>
+      </PopoverContent>
+    </Popover>
+  )
+}
