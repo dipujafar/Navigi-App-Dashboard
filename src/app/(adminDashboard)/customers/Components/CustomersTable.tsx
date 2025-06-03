@@ -85,7 +85,7 @@ const CustomersTable = () => {
         <div className="flex gap-2">
           <Eye
             size={22}
-            color="var(--color-text-color)"
+            color="#5C5C5C"
             onClick={() => setOpen(!open)}
           />
           <Popconfirm

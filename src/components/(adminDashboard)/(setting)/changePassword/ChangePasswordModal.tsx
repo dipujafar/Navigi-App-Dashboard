@@ -29,16 +29,18 @@ const ChangePasswordModal = ({ open, setOpen }: TPropsType) => {
           minWidth: "max-content",
         }}
       >
-        <div className="py-14">
-          <div
-            className="w-12 h-12 bg-main-color  absolute top-2 right-2 rounded-full cursor-pointer"
-            onClick={() => setOpen(false)}
-          >
-            <RiCloseLargeLine
-              size={18}
-              color="#fff"
-              className="absolute top-1/3 left-1/3"
-            />
+        <div>
+          <div className="flex justify-between items-center">
+            <h4></h4>
+            <div
+              className="w-10 h-10 bg-transparent border border-red-500 hover:bg-red-600   rounded-full flex justify-center items-center cursor-pointer group duration-500"
+              onClick={() => setOpen(false)}
+            >
+              <RiCloseLargeLine
+                size={15}
+                className="text-red-600 group-hover:text-red-100 group"
+              />
+            </div>
           </div>
 
           {/* header */}

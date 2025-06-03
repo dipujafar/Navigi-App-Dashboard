@@ -22,14 +22,15 @@ const EarningDetailsModal = ({ open, setOpen }: TPropsType) => {
     >
       <div className="pb-20 ">
         <div className="flex justify-between items-center">
-          <h4 className="text-center text-xl font-medium text-[#333s]">
-            User Details
-          </h4>
-          <div
-            className="w-10 h-10 bg-main-color  rounded-full flex justify-center items-center cursor-pointer"
+         <div></div>
+           <div
+            className="w-10 h-10 bg-transparent border border-red-500 hover:bg-red-600   rounded-full flex justify-center items-center cursor-pointer group duration-500"
             onClick={() => setOpen(false)}
           >
-            <RiCloseLargeLine size={18} color="#fff" className="" />
+            <RiCloseLargeLine
+              size={15}
+              className="text-red-600 group-hover:text-red-100 group"
+            />
           </div>
         </div>
         <div className="w-fit mx-auto relative">
